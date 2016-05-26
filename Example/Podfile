@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'GooropSQLiteORM_Example' do
+  pod 'GooropSQLiteORM', :path => '../'
+  pod 'JSONModel', '~> 1.2'
+  pod 'FMDB', '~> 2.6'
+
+  target 'GooropSQLiteORM_Tests' do
+    inherit! :search_paths
+  end
+end

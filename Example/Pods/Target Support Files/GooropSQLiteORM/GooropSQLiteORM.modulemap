@@ -1,0 +1,6 @@
+framework module GooropSQLiteORM {
+  umbrella header "GooropSQLiteORM-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,26 @@
+PODS:
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - GooropSQLiteORM (0.2.2):
+    - FMDB (~> 2.6)
+    - JSONModel (~> 1.2)
+  - JSONModel (1.2.0)
+
+DEPENDENCIES:
+  - FMDB (~> 2.6)
+  - GooropSQLiteORM (from `../`)
+  - JSONModel (~> 1.2)
+
+EXTERNAL SOURCES:
+  GooropSQLiteORM:
+    :path: ../
+
+SPEC CHECKSUMS:
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  GooropSQLiteORM: 7f9fc5900194cb9de78ed874d187f50dd2cdcc01
+  JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
+
+PODFILE CHECKSUM: ebb06ef8b6ce1a630f91135358aff1c8e0e338cf
+
+COCOAPODS: 1.0.0

@@ -1,0 +1,1231 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000F15A8E52D7F8A5EA10B6D208FC75A /* JSONValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DA42CA3FCFBFACF08F6DE0BB821A373 /* JSONValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07C0118CCE3C74AD68BC9EB6F5CB5267 /* GooropSQLiteQueryBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A2213ACC05791239A1981C989B4AE506 /* GooropSQLiteQueryBuilder.m */; };
+		0D619A711F71058C9238B17E9AF48AFC /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D2899A66B46273DACA38D0E8F14B0F1A /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		127F7B35CF1884715AA26ECDB255574B /* GooropSQLiteQueryBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = D7A97722D5854AFFFF77CBBF8C8B6853 /* GooropSQLiteQueryBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1323240C770682D51BB00761AD610830 /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 390ECAAF4EFEBB29EA0193D8DCFADAA4 /* JSONModelArray.m */; };
+		183A0D8AF38E0EE20E47F1FEF9B37327 /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A769BE96224B17C98EDC47A14659F53 /* FMResultSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		197EE5B46D4C85716F40E4E49FF629DD /* GooropSQLiteQueryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF8B76B49234CF78540D5956F9CF3C8 /* GooropSQLiteQueryManager.m */; };
+		1981A336C50F96E32185E74E2BF0F7FF /* GooropSQLiteManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 450075DB26B5BE3EBFAEFAA06FAD398B /* GooropSQLiteManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19D6805AA4B19A45486B613B20EED453 /* NSArray+JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B003C9384AD02E91BA0010D510E55F /* NSArray+JSONModel.m */; };
+		1A17FB521E5C7323AA4401DDE7953124 /* Pods-GooropSQLiteORM_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D521390316E047D6EA71785F4961868C /* Pods-GooropSQLiteORM_Tests-dummy.m */; };
+		1F16397A0528174D5469165ED4A3B621 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF42746FC99B05C71E37B0F1AAD36EA /* Foundation.framework */; };
+		22C877B36DE02DB65C63A96BBA8EB994 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD5CF251AD5E5EAFF36E82CB683CD62 /* JSONModel.m */; };
+		24084ED61C716B3EAD144F96E75DD663 /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = B70C994502095B777065090C3A8F1A99 /* JSONModelError.m */; };
+		27ADA51C597D7F827D5FF92BEF0B59C1 /* Pods-GooropSQLiteORM_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 625381B591D0DB21EEECC31667B682FE /* Pods-GooropSQLiteORM_Example-dummy.m */; };
+		30172798161B5B9E062B6E4C417A3E4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF42746FC99B05C71E37B0F1AAD36EA /* Foundation.framework */; };
+		36C5D05537F068AB6595F86048B7AE69 /* Pods-GooropSQLiteORM_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 189439A1BEE0B64C9C3EDA6390772504 /* Pods-GooropSQLiteORM_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CE4CD1559B44EB77EB0A421B4E96BE3 /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14CC9F1143ABD2FC473BFB5543FB1DCC /* JSONModel.framework */; };
+		3E48A504A843DD1038D44E6276F44CEC /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED889ACFCEA885A5D724720296677B /* JSONModel+networking.m */; };
+		3ECC23FFAE400A6B2658AAF2990D83BE /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = B5B266B28FEBB529F801903D489ECC86 /* FMDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F61BE79D4B46C119C136EDE960CE78C /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = E4618F6BA0324DE59933CAB7E2EDB8B5 /* FMDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4091B30FF7D2A6650335F1B11E33934D /* JSONAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BD5FD0492DA1F9AD522CD04F8BC00982 /* JSONAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		42261F03D0F9E677DAF24AEC2FB3BF25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF42746FC99B05C71E37B0F1AAD36EA /* Foundation.framework */; };
+		4793D70D003FCA5BD89DBA5884AB7DD0 /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F60105DEA3885EC5BD850861AFF38D /* JSONModelClassProperty.m */; };
+		47BB0FD692E6DCAC4D89A8C0DF287093 /* JSONModelClassProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = AA63BA0AA9A5A9E666931C6527EF68CB /* JSONModelClassProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A0971A3AD834898A4DA47A329330932 /* GooropSQLiteQueryManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 72EBE5440BF836E407078DF86ACFBCA8 /* GooropSQLiteQueryManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D82F693058BDAACFAD97DD395805F39 /* JSONKeyMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 20D30A8C431EC7AD6AE8BD53CAE14F1C /* JSONKeyMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D93A97354F18E3C5D42DC8062EE73F6 /* GooropSQLiteQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 24CADF3AACDBE291099E2C6EE374BA75 /* GooropSQLiteQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DE35982098E2BEE652F9BF19E08FB43 /* JSONModelError.h in Headers */ = {isa = PBXBuildFile; fileRef = 5581AE07C3056317B4BDF55DD4E5D10D /* JSONModelError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5ED5C34AEE3CEEBF2FD41F95CF1209EB /* GooropSQLiteORM-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C01902FB5CDE7C4F2772A265359C40F0 /* GooropSQLiteORM-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		631DC7A41EE9F747E95CFF6FDE95EF5B /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1049F0C838627ED469FECC3FAA27CDBC /* JSONAPI.m */; };
+		637D870F8ECEAFD6035B59AC85961F98 /* GooropSQLiteModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 69B4C107093FFFE31DF6090C8484015E /* GooropSQLiteModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B5F2CB6851D00D3357221C5E2F21226 /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC9E320F2481EC67AC9676EA0B1014A /* FMDB.framework */; };
+		6C63E2BEBE2BC08BD46F6A91D0A08143 /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7C507534885670157A2C038ADA9132 /* FMDatabasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		730DB893A6CA5997B567B2B3EE51D5FB /* JSONModel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF18544D7EC44922B723EF8540B5AC3 /* JSONModel-dummy.m */; };
+		74695802583BDB0C0818AC1B97F63815 /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 608FD32A53AACF151D9B40AED9333409 /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		751F0104322775ECD3F07DCD3D7631E9 /* GooropSQLiteORM-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBE8583C498F6CAF5B4F7B87F5F79F4 /* GooropSQLiteORM-dummy.m */; };
+		7B89034BA28678BBFDAF2FEB2B0FFDD3 /* GooropSQLiteChildern.m in Sources */ = {isa = PBXBuildFile; fileRef = E80B4B505C2F28FB73708644D57F733E /* GooropSQLiteChildern.m */; };
+		7C818AE74E830311E61FF1A7E42D0713 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = FA35348C978E647A8F712ACD54E584F8 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8E5245F4101C8A0DDEA3B2C1A8074CF0 /* JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0B4F20C084ACB77FB24F1BC8C54EFA /* JSONModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8FD0B67D285B107A1CE37F2F4301CF24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF42746FC99B05C71E37B0F1AAD36EA /* Foundation.framework */; };
+		8FE45947F0D36562AC1595946199AED0 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 80546A46876FCC0FBA0A1B30E58CA17F /* JSONValueTransformer.m */; };
+		9DC8A38DC3CACDA0769B99EC855F2B16 /* GooropSQLiteModelMigrator.h in Headers */ = {isa = PBXBuildFile; fileRef = F000A8E1FE5B10ECB84C3BC32C0EDE08 /* GooropSQLiteModelMigrator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2EB04F33F7AC50B848C0CC27165C341 /* GooropSQLiteQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 256CC3C0840D9262E8353819735B1781 /* GooropSQLiteQuery.m */; };
+		A509943CA785F1D47236A280D296884D /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 412DF85CCB8127F9D45177B9348635E7 /* JSONKeyMapper.m */; };
+		A9A0E37F73D5F68FA97DC06E470BA347 /* GooropSQLiteChildern.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D149D4C96A5DC8E0C1A517BF2FA5779 /* GooropSQLiteChildern.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD01D434D8D120A3767270766AD30797 /* FMDB-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 109720101C56F22FC6AD6230AA7148E2 /* FMDB-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3D3153BD81C26C7B2C2D7E71EF33AE2 /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C90CDF150A03E2459F090FA34362C932 /* JSONHTTPClient.m */; };
+		B7E74B4A1DE4AC9A0F1D1E7090A16FCA /* JSONModelArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E9F800E7AD20E787E000AA60D4CE75B /* JSONModelArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA88E88A631D6BD023521B7206CE6C25 /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4414631CDBC9D246070F691E428C37B0 /* FMDB-dummy.m */; };
+		BD1E5771F0595984C5E7A02232B75856 /* GooropSQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E568FB18F1028BE53B5528A8045B249A /* GooropSQLiteManager.m */; };
+		C8FC0929A42C36174794FE1ADFD620E3 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8082BA0104BCA42132796170F4E75D46 /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D14516A110F811CBD87E0445F32ABDBD /* JSONHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8302B9A115DC7CCBA1D7FA15E23A22CE /* JSONHTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1DA063143EADE50E93A91A731DCFB68 /* JSONModel+networking.h in Headers */ = {isa = PBXBuildFile; fileRef = BBFD61CBB163B9731C45717B075F8E74 /* JSONModel+networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6A3B656B369F0AEA203B3F304D51944 /* JSONModel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CAC4E52EB3BCF61DA8BD7A9ABDE6DE63 /* JSONModel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCE891365448C969738E517A17CC2579 /* GooropSQLiteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ABED9B72EA8B9BED70E43E7F0D7A288D /* GooropSQLiteModel.m */; };
+		E2C10930D5716E969875A5D66CD1B16F /* NSArray+JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F7864D61646F79EEEB10CB2EFBF9036 /* NSArray+JSONModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E330886E0E7C450E9669C4BD025D9ABD /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = B1F37B7173EC8C2B49E6A0C8EE4A63AE /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6A91E54EB29DB556569829C3DB7A79D /* JSONModelLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 5887C19C63FDF6CAE0743935F0DA4547 /* JSONModelLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF7A4B53B53FCC38613E5F72A17F12E7 /* Pods-GooropSQLiteORM_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC99E127D8851A15ED03FBF818853E70 /* Pods-GooropSQLiteORM_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0895B2A83F948153E1E5EA38A230B66 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A468B866A26B98A496722FC458C49F23 /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F5A0569CB70F6F37A16E32EE210D0C66 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = BDEF8B7FE425CE2BAB32292B1F435C62 /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F940AD9830978E9BB9974A2F5C0D93F4 /* GooropSQLiteModelMigrator.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3D71AD64F6DE72E4CB5C784E75FAFE /* GooropSQLiteModelMigrator.m */; };
+		FAD67A4B8E4FC6C21A7785E8F1A69745 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF42746FC99B05C71E37B0F1AAD36EA /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B053E16B58DF9C8CC21629082C331F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC6D588553CC38D83D5B44392C0725B9;
+			remoteInfo = JSONModel;
+		};
+		48EB3A4BF48696EF7052DACAE055EFC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23CF27B2BA6AC7125EFFEDA8C5AA819F;
+			remoteInfo = FMDB;
+		};
+		803D2BD54A40E58D607F26AA798A2C9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23CF27B2BA6AC7125EFFEDA8C5AA819F;
+			remoteInfo = FMDB;
+		};
+		8EC0E9E86BB005B20F995C17DE7BF457 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB4A78D95F2C9C73ED13221DA5B9CD56;
+			remoteInfo = GooropSQLiteORM;
+		};
+		A4109EC52A92CB6E7912C5C8CEB90E94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC6D588553CC38D83D5B44392C0725B9;
+			remoteInfo = JSONModel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07543A90905C2BB7D51253475B9F113E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		099B6C606095834320CB7F085A517D19 /* Pods-GooropSQLiteORM_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GooropSQLiteORM_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		0AF453A5DCBFE43A8339DBF5709459B7 /* FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMDB.xcconfig; sourceTree = "<group>"; };
+		1049F0C838627ED469FECC3FAA27CDBC /* JSONAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONAPI.m; path = JSONModel/JSONModelNetworking/JSONAPI.m; sourceTree = "<group>"; };
+		109720101C56F22FC6AD6230AA7148E2 /* FMDB-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMDB-umbrella.h"; sourceTree = "<group>"; };
+		11ED889ACFCEA885A5D724720296677B /* JSONModel+networking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "JSONModel+networking.m"; path = "JSONModel/JSONModelNetworking/JSONModel+networking.m"; sourceTree = "<group>"; };
+		148C67B65BBB05D24AFB087D1C1FE2B3 /* Pods-GooropSQLiteORM_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-GooropSQLiteORM_Example.modulemap"; sourceTree = "<group>"; };
+		14CC9F1143ABD2FC473BFB5543FB1DCC /* JSONModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14F05563AB4730CFF4697437D6003C2E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16A38A18867EB4C40EF50D78DF720D1A /* GooropSQLiteORM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GooropSQLiteORM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		189439A1BEE0B64C9C3EDA6390772504 /* Pods-GooropSQLiteORM_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GooropSQLiteORM_Tests-umbrella.h"; sourceTree = "<group>"; };
+		1AF42746FC99B05C71E37B0F1AAD36EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		20D30A8C431EC7AD6AE8BD53CAE14F1C /* JSONKeyMapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONKeyMapper.h; path = JSONModel/JSONModelTransformations/JSONKeyMapper.h; sourceTree = "<group>"; };
+		24CADF3AACDBE291099E2C6EE374BA75 /* GooropSQLiteQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GooropSQLiteQuery.h; sourceTree = "<group>"; };
+		256CC3C0840D9262E8353819735B1781 /* GooropSQLiteQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GooropSQLiteQuery.m; sourceTree = "<group>"; };
+		28C74C785E150E2912AEAF85CB2E4FF0 /* Pods-GooropSQLiteORM_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GooropSQLiteORM_Tests-resources.sh"; sourceTree = "<group>"; };
+		2DEC21E0BB35F4CB195AB5F67672B9F1 /* Pods-GooropSQLiteORM_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GooropSQLiteORM_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		2DF18544D7EC44922B723EF8540B5AC3 /* JSONModel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JSONModel-dummy.m"; sourceTree = "<group>"; };
+		34DE75EA0F456E60C6414AB4BE4D36D0 /* GooropSQLiteORM-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GooropSQLiteORM-prefix.pch"; sourceTree = "<group>"; };
+		390ECAAF4EFEBB29EA0193D8DCFADAA4 /* JSONModelArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModelArray.m; path = JSONModel/JSONModel/JSONModelArray.m; sourceTree = "<group>"; };
+		412DF85CCB8127F9D45177B9348635E7 /* JSONKeyMapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONKeyMapper.m; path = JSONModel/JSONModelTransformations/JSONKeyMapper.m; sourceTree = "<group>"; };
+		4414631CDBC9D246070F691E428C37B0 /* FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FMDB-dummy.m"; sourceTree = "<group>"; };
+		450075DB26B5BE3EBFAEFAA06FAD398B /* GooropSQLiteManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GooropSQLiteManager.h; sourceTree = "<group>"; };
+		49976A4D62C147001A67EE7B3C8922E6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A769BE96224B17C98EDC47A14659F53 /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
+		4BBE8583C498F6CAF5B4F7B87F5F79F4 /* GooropSQLiteORM-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GooropSQLiteORM-dummy.m"; sourceTree = "<group>"; };
+		4C48ACA67B341B45F61F2C1E520362DE /* Pods-GooropSQLiteORM_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GooropSQLiteORM_Example-resources.sh"; sourceTree = "<group>"; };
+		4CCB49869287D7C27C79C0AE1F7C7103 /* Pods-GooropSQLiteORM_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GooropSQLiteORM_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		4D0B4F20C084ACB77FB24F1BC8C54EFA /* JSONModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModel.h; path = JSONModel/JSONModel/JSONModel.h; sourceTree = "<group>"; };
+		5581AE07C3056317B4BDF55DD4E5D10D /* JSONModelError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelError.h; path = JSONModel/JSONModel/JSONModelError.h; sourceTree = "<group>"; };
+		5887C19C63FDF6CAE0743935F0DA4547 /* JSONModelLib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelLib.h; path = JSONModel/JSONModelLib.h; sourceTree = "<group>"; };
+		5905468973D0B50A20C2CAB61FAB189E /* JSONModel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = JSONModel.modulemap; sourceTree = "<group>"; };
+		5D1821D62092CF1CD471DF679DED7C05 /* Pods-GooropSQLiteORM_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-GooropSQLiteORM_Tests.modulemap"; sourceTree = "<group>"; };
+		5FD213C42C82625CD2E34B4BDEC7E2C9 /* FMDB.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FMDB.modulemap; sourceTree = "<group>"; };
+		608FD32A53AACF151D9B40AED9333409 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		625381B591D0DB21EEECC31667B682FE /* Pods-GooropSQLiteORM_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GooropSQLiteORM_Example-dummy.m"; sourceTree = "<group>"; };
+		69B4C107093FFFE31DF6090C8484015E /* GooropSQLiteModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GooropSQLiteModel.h; sourceTree = "<group>"; };
+		6C2E26E20A32798825435CADDB8DD6DB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E9F800E7AD20E787E000AA60D4CE75B /* JSONModelArray.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelArray.h; path = JSONModel/JSONModel/JSONModelArray.h; sourceTree = "<group>"; };
+		6EC9E320F2481EC67AC9676EA0B1014A /* FMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72EBE5440BF836E407078DF86ACFBCA8 /* GooropSQLiteQueryManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GooropSQLiteQueryManager.h; sourceTree = "<group>"; };
+		7D149D4C96A5DC8E0C1A517BF2FA5779 /* GooropSQLiteChildern.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GooropSQLiteChildern.h; sourceTree = "<group>"; };
+		7DA42CA3FCFBFACF08F6DE0BB821A373 /* JSONValueTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONValueTransformer.h; path = JSONModel/JSONModelTransformations/JSONValueTransformer.h; sourceTree = "<group>"; };
+		7FA11693BB79F3011BEF45640D70655F /* GooropSQLiteORM.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GooropSQLiteORM.xcconfig; sourceTree = "<group>"; };
+		80546A46876FCC0FBA0A1B30E58CA17F /* JSONValueTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONValueTransformer.m; path = JSONModel/JSONModelTransformations/JSONValueTransformer.m; sourceTree = "<group>"; };
+		8082BA0104BCA42132796170F4E75D46 /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
+		8302B9A115DC7CCBA1D7FA15E23A22CE /* JSONHTTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONHTTPClient.h; path = JSONModel/JSONModelNetworking/JSONHTTPClient.h; sourceTree = "<group>"; };
+		8BA7A15B4A1F7914DBCD6618EE34B555 /* Pods-GooropSQLiteORM_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GooropSQLiteORM_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		8C625391F80FC5BEB5334D1F6C017ED1 /* JSONModel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JSONModel.xcconfig; sourceTree = "<group>"; };
+		8F7864D61646F79EEEB10CB2EFBF9036 /* NSArray+JSONModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+JSONModel.h"; path = "JSONModel/JSONModelCategories/NSArray+JSONModel.h"; sourceTree = "<group>"; };
+		916B3CDB10A72A0FC9281351D871AC88 /* Pods_GooropSQLiteORM_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GooropSQLiteORM_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94390E319C2A466E5966CF11F574ADC6 /* Pods-GooropSQLiteORM_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GooropSQLiteORM_Example-frameworks.sh"; sourceTree = "<group>"; };
+		99324E0AC2899282E73D29919D759096 /* Pods_GooropSQLiteORM_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GooropSQLiteORM_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A03054488A9F6C9029C79CC18E495B22 /* JSONModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A12C2951AC2301A6B956AF5A27894E69 /* GooropSQLiteORM.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = GooropSQLiteORM.modulemap; sourceTree = "<group>"; };
+		A2213ACC05791239A1981C989B4AE506 /* GooropSQLiteQueryBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GooropSQLiteQueryBuilder.m; sourceTree = "<group>"; };
+		A3097E88B7517E0070C34344F19725E1 /* Pods-GooropSQLiteORM_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GooropSQLiteORM_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A468B866A26B98A496722FC458C49F23 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		A7CFF9C3D758ECEFC6FB7370C007F16F /* JSONModel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONModel-prefix.pch"; sourceTree = "<group>"; };
+		A9D42FC44EACA468371AA967844D389B /* FMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA63BA0AA9A5A9E666931C6527EF68CB /* JSONModelClassProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelClassProperty.h; path = JSONModel/JSONModel/JSONModelClassProperty.h; sourceTree = "<group>"; };
+		ABED9B72EA8B9BED70E43E7F0D7A288D /* GooropSQLiteModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GooropSQLiteModel.m; sourceTree = "<group>"; };
+		AC99E127D8851A15ED03FBF818853E70 /* Pods-GooropSQLiteORM_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GooropSQLiteORM_Example-umbrella.h"; sourceTree = "<group>"; };
+		AE3D71AD64F6DE72E4CB5C784E75FAFE /* GooropSQLiteModelMigrator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GooropSQLiteModelMigrator.m; sourceTree = "<group>"; };
+		B1F37B7173EC8C2B49E6A0C8EE4A63AE /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
+		B5B266B28FEBB529F801903D489ECC86 /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
+		B70C994502095B777065090C3A8F1A99 /* JSONModelError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModelError.m; path = JSONModel/JSONModel/JSONModelError.m; sourceTree = "<group>"; };
+		B9F60105DEA3885EC5BD850861AFF38D /* JSONModelClassProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModelClassProperty.m; path = JSONModel/JSONModel/JSONModelClassProperty.m; sourceTree = "<group>"; };
+		BBFD61CBB163B9731C45717B075F8E74 /* JSONModel+networking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "JSONModel+networking.h"; path = "JSONModel/JSONModelNetworking/JSONModel+networking.h"; sourceTree = "<group>"; };
+		BD5FD0492DA1F9AD522CD04F8BC00982 /* JSONAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONAPI.h; path = JSONModel/JSONModelNetworking/JSONAPI.h; sourceTree = "<group>"; };
+		BDEF8B7FE425CE2BAB32292B1F435C62 /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
+		BEF8B76B49234CF78540D5956F9CF3C8 /* GooropSQLiteQueryManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GooropSQLiteQueryManager.m; sourceTree = "<group>"; };
+		C01902FB5CDE7C4F2772A265359C40F0 /* GooropSQLiteORM-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GooropSQLiteORM-umbrella.h"; sourceTree = "<group>"; };
+		C90CDF150A03E2459F090FA34362C932 /* JSONHTTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONHTTPClient.m; path = JSONModel/JSONModelNetworking/JSONHTTPClient.m; sourceTree = "<group>"; };
+		CAC4E52EB3BCF61DA8BD7A9ABDE6DE63 /* JSONModel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONModel-umbrella.h"; sourceTree = "<group>"; };
+		CBAD3D83FB482C278BF72C2AF1EC21E0 /* Pods-GooropSQLiteORM_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GooropSQLiteORM_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		CF03C6CFAF8C043560F2653CAC446036 /* FMDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMDB-prefix.pch"; sourceTree = "<group>"; };
+		D2899A66B46273DACA38D0E8F14B0F1A /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
+		D521390316E047D6EA71785F4961868C /* Pods-GooropSQLiteORM_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GooropSQLiteORM_Tests-dummy.m"; sourceTree = "<group>"; };
+		D7A97722D5854AFFFF77CBBF8C8B6853 /* GooropSQLiteQueryBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GooropSQLiteQueryBuilder.h; sourceTree = "<group>"; };
+		E06D17943F40B766721201C12B8B2436 /* Pods-GooropSQLiteORM_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GooropSQLiteORM_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E2B003C9384AD02E91BA0010D510E55F /* NSArray+JSONModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+JSONModel.m"; path = "JSONModel/JSONModelCategories/NSArray+JSONModel.m"; sourceTree = "<group>"; };
+		E4618F6BA0324DE59933CAB7E2EDB8B5 /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
+		E568FB18F1028BE53B5528A8045B249A /* GooropSQLiteManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GooropSQLiteManager.m; sourceTree = "<group>"; };
+		E6928DEE527347ABB2ED4623D762376E /* Pods-GooropSQLiteORM_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GooropSQLiteORM_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E7A814771145FCE1B3D4F1151B560A8B /* Pods-GooropSQLiteORM_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GooropSQLiteORM_Example.release.xcconfig"; sourceTree = "<group>"; };
+		E80B4B505C2F28FB73708644D57F733E /* GooropSQLiteChildern.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GooropSQLiteChildern.m; sourceTree = "<group>"; };
+		EA7C507534885670157A2C038ADA9132 /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
+		EAA998F778D480AB7C2608A60DCFFFAE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDD5CF251AD5E5EAFF36E82CB683CD62 /* JSONModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModel.m; path = JSONModel/JSONModel/JSONModel.m; sourceTree = "<group>"; };
+		F000A8E1FE5B10ECB84C3BC32C0EDE08 /* GooropSQLiteModelMigrator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GooropSQLiteModelMigrator.h; sourceTree = "<group>"; };
+		FA35348C978E647A8F712ACD54E584F8 /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07163A0956D3012D6BF74E0B0E4CE17D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FD0B67D285B107A1CE37F2F4301CF24 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A1DE6D3758B9F2CE469171733870A12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F16397A0528174D5469165ED4A3B621 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33C0EF1D961FB9DFFDF133B0D5ACAD8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42261F03D0F9E677DAF24AEC2FB3BF25 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		833D4B7FB2CE584F29843EA29CAC66C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30172798161B5B9E062B6E4C417A3E4B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9163AEFC5736947C21D7A0DA2773225D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B5F2CB6851D00D3357221C5E2F21226 /* FMDB.framework in Frameworks */,
+				FAD67A4B8E4FC6C21A7785E8F1A69745 /* Foundation.framework in Frameworks */,
+				3CE4CD1559B44EB77EB0A421B4E96BE3 /* JSONModel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22F4EF77D476D8D948A5B8907A4AE677 /* Pods-GooropSQLiteORM_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				EAA998F778D480AB7C2608A60DCFFFAE /* Info.plist */,
+				5D1821D62092CF1CD471DF679DED7C05 /* Pods-GooropSQLiteORM_Tests.modulemap */,
+				A3097E88B7517E0070C34344F19725E1 /* Pods-GooropSQLiteORM_Tests-acknowledgements.markdown */,
+				099B6C606095834320CB7F085A517D19 /* Pods-GooropSQLiteORM_Tests-acknowledgements.plist */,
+				D521390316E047D6EA71785F4961868C /* Pods-GooropSQLiteORM_Tests-dummy.m */,
+				4CCB49869287D7C27C79C0AE1F7C7103 /* Pods-GooropSQLiteORM_Tests-frameworks.sh */,
+				28C74C785E150E2912AEAF85CB2E4FF0 /* Pods-GooropSQLiteORM_Tests-resources.sh */,
+				189439A1BEE0B64C9C3EDA6390772504 /* Pods-GooropSQLiteORM_Tests-umbrella.h */,
+				CBAD3D83FB482C278BF72C2AF1EC21E0 /* Pods-GooropSQLiteORM_Tests.debug.xcconfig */,
+				E6928DEE527347ABB2ED4623D762376E /* Pods-GooropSQLiteORM_Tests.release.xcconfig */,
+			);
+			name = "Pods-GooropSQLiteORM_Tests";
+			path = "Target Support Files/Pods-GooropSQLiteORM_Tests";
+			sourceTree = "<group>";
+		};
+		27187957A77E73221BFC1A1C6D06E254 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5FD213C42C82625CD2E34B4BDEC7E2C9 /* FMDB.modulemap */,
+				0AF453A5DCBFE43A8339DBF5709459B7 /* FMDB.xcconfig */,
+				4414631CDBC9D246070F691E428C37B0 /* FMDB-dummy.m */,
+				CF03C6CFAF8C043560F2653CAC446036 /* FMDB-prefix.pch */,
+				109720101C56F22FC6AD6230AA7148E2 /* FMDB-umbrella.h */,
+				07543A90905C2BB7D51253475B9F113E /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FMDB";
+			sourceTree = "<group>";
+		};
+		2DFF28E658674728F35516E2FF0C9183 /* Pods-GooropSQLiteORM_Example */ = {
+			isa = PBXGroup;
+			children = (
+				6C2E26E20A32798825435CADDB8DD6DB /* Info.plist */,
+				148C67B65BBB05D24AFB087D1C1FE2B3 /* Pods-GooropSQLiteORM_Example.modulemap */,
+				E06D17943F40B766721201C12B8B2436 /* Pods-GooropSQLiteORM_Example-acknowledgements.markdown */,
+				8BA7A15B4A1F7914DBCD6618EE34B555 /* Pods-GooropSQLiteORM_Example-acknowledgements.plist */,
+				625381B591D0DB21EEECC31667B682FE /* Pods-GooropSQLiteORM_Example-dummy.m */,
+				94390E319C2A466E5966CF11F574ADC6 /* Pods-GooropSQLiteORM_Example-frameworks.sh */,
+				4C48ACA67B341B45F61F2C1E520362DE /* Pods-GooropSQLiteORM_Example-resources.sh */,
+				AC99E127D8851A15ED03FBF818853E70 /* Pods-GooropSQLiteORM_Example-umbrella.h */,
+				2DEC21E0BB35F4CB195AB5F67672B9F1 /* Pods-GooropSQLiteORM_Example.debug.xcconfig */,
+				E7A814771145FCE1B3D4F1151B560A8B /* Pods-GooropSQLiteORM_Example.release.xcconfig */,
+			);
+			name = "Pods-GooropSQLiteORM_Example";
+			path = "Target Support Files/Pods-GooropSQLiteORM_Example";
+			sourceTree = "<group>";
+		};
+		2E63C4A339DF7EE6240C91FBBB5AC430 /* GooropSQLiteORM */ = {
+			isa = PBXGroup;
+			children = (
+				C6C7D95FFAFA187878FC37EC31E2F492 /* GooropSQLiteORM */,
+				B093F6FCE7AF416277CA43FA9218C0D8 /* Support Files */,
+			);
+			name = GooropSQLiteORM;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		464B20E22F072BAA4BF5D78F6E3659B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EC9E320F2481EC67AC9676EA0B1014A /* FMDB.framework */,
+				14CC9F1143ABD2FC473BFB5543FB1DCC /* JSONModel.framework */,
+				F133765A2ADC6368B2794C6D5D7DD4DE /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		493EE84C9160F89184D83152406453BE /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2DFF28E658674728F35516E2FF0C9183 /* Pods-GooropSQLiteORM_Example */,
+				22F4EF77D476D8D948A5B8907A4AE677 /* Pods-GooropSQLiteORM_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		51F3FAFDD6311F05517CEF3F12BA2B51 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DDA6067F3D7FA73BF308859F52A5E619 /* FMDB */,
+				F1B7C7EC344BE0F4B63E2910FDDA03D7 /* JSONModel */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		67CBA8DF233B3AEEBA2FF2DE7990953D /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E63C4A339DF7EE6240C91FBBB5AC430 /* GooropSQLiteORM */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				67CBA8DF233B3AEEBA2FF2DE7990953D /* Development Pods */,
+				464B20E22F072BAA4BF5D78F6E3659B6 /* Frameworks */,
+				51F3FAFDD6311F05517CEF3F12BA2B51 /* Pods */,
+				A924047EC47675334B32C4A2E0C0578F /* Products */,
+				493EE84C9160F89184D83152406453BE /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		829FBDDBD94F5AE13C42FD284C6BDB2F /* standard */ = {
+			isa = PBXGroup;
+			children = (
+				E4618F6BA0324DE59933CAB7E2EDB8B5 /* FMDatabase.h */,
+				BDEF8B7FE425CE2BAB32292B1F435C62 /* FMDatabase.m */,
+				608FD32A53AACF151D9B40AED9333409 /* FMDatabaseAdditions.h */,
+				A468B866A26B98A496722FC458C49F23 /* FMDatabaseAdditions.m */,
+				EA7C507534885670157A2C038ADA9132 /* FMDatabasePool.h */,
+				8082BA0104BCA42132796170F4E75D46 /* FMDatabasePool.m */,
+				B1F37B7173EC8C2B49E6A0C8EE4A63AE /* FMDatabaseQueue.h */,
+				D2899A66B46273DACA38D0E8F14B0F1A /* FMDatabaseQueue.m */,
+				B5B266B28FEBB529F801903D489ECC86 /* FMDB.h */,
+				4A769BE96224B17C98EDC47A14659F53 /* FMResultSet.h */,
+				FA35348C978E647A8F712ACD54E584F8 /* FMResultSet.m */,
+			);
+			name = standard;
+			sourceTree = "<group>";
+		};
+		A924047EC47675334B32C4A2E0C0578F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9D42FC44EACA468371AA967844D389B /* FMDB.framework */,
+				16A38A18867EB4C40EF50D78DF720D1A /* GooropSQLiteORM.framework */,
+				A03054488A9F6C9029C79CC18E495B22 /* JSONModel.framework */,
+				916B3CDB10A72A0FC9281351D871AC88 /* Pods_GooropSQLiteORM_Example.framework */,
+				99324E0AC2899282E73D29919D759096 /* Pods_GooropSQLiteORM_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A92919F1BA752946D8DDF0E493A5E244 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7D149D4C96A5DC8E0C1A517BF2FA5779 /* GooropSQLiteChildern.h */,
+				E80B4B505C2F28FB73708644D57F733E /* GooropSQLiteChildern.m */,
+				450075DB26B5BE3EBFAEFAA06FAD398B /* GooropSQLiteManager.h */,
+				E568FB18F1028BE53B5528A8045B249A /* GooropSQLiteManager.m */,
+				69B4C107093FFFE31DF6090C8484015E /* GooropSQLiteModel.h */,
+				ABED9B72EA8B9BED70E43E7F0D7A288D /* GooropSQLiteModel.m */,
+				F000A8E1FE5B10ECB84C3BC32C0EDE08 /* GooropSQLiteModelMigrator.h */,
+				AE3D71AD64F6DE72E4CB5C784E75FAFE /* GooropSQLiteModelMigrator.m */,
+				24CADF3AACDBE291099E2C6EE374BA75 /* GooropSQLiteQuery.h */,
+				256CC3C0840D9262E8353819735B1781 /* GooropSQLiteQuery.m */,
+				D7A97722D5854AFFFF77CBBF8C8B6853 /* GooropSQLiteQueryBuilder.h */,
+				A2213ACC05791239A1981C989B4AE506 /* GooropSQLiteQueryBuilder.m */,
+				72EBE5440BF836E407078DF86ACFBCA8 /* GooropSQLiteQueryManager.h */,
+				BEF8B76B49234CF78540D5956F9CF3C8 /* GooropSQLiteQueryManager.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B093F6FCE7AF416277CA43FA9218C0D8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A12C2951AC2301A6B956AF5A27894E69 /* GooropSQLiteORM.modulemap */,
+				7FA11693BB79F3011BEF45640D70655F /* GooropSQLiteORM.xcconfig */,
+				4BBE8583C498F6CAF5B4F7B87F5F79F4 /* GooropSQLiteORM-dummy.m */,
+				34DE75EA0F456E60C6414AB4BE4D36D0 /* GooropSQLiteORM-prefix.pch */,
+				C01902FB5CDE7C4F2772A265359C40F0 /* GooropSQLiteORM-umbrella.h */,
+				49976A4D62C147001A67EE7B3C8922E6 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/GooropSQLiteORM";
+			sourceTree = "<group>";
+		};
+		C6C7D95FFAFA187878FC37EC31E2F492 /* GooropSQLiteORM */ = {
+			isa = PBXGroup;
+			children = (
+				A92919F1BA752946D8DDF0E493A5E244 /* Classes */,
+			);
+			path = GooropSQLiteORM;
+			sourceTree = "<group>";
+		};
+		CA808FA20C244847149135CCBDCF09F3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				14F05563AB4730CFF4697437D6003C2E /* Info.plist */,
+				5905468973D0B50A20C2CAB61FAB189E /* JSONModel.modulemap */,
+				8C625391F80FC5BEB5334D1F6C017ED1 /* JSONModel.xcconfig */,
+				2DF18544D7EC44922B723EF8540B5AC3 /* JSONModel-dummy.m */,
+				A7CFF9C3D758ECEFC6FB7370C007F16F /* JSONModel-prefix.pch */,
+				CAC4E52EB3BCF61DA8BD7A9ABDE6DE63 /* JSONModel-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JSONModel";
+			sourceTree = "<group>";
+		};
+		DDA6067F3D7FA73BF308859F52A5E619 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				829FBDDBD94F5AE13C42FD284C6BDB2F /* standard */,
+				27187957A77E73221BFC1A1C6D06E254 /* Support Files */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		F133765A2ADC6368B2794C6D5D7DD4DE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1AF42746FC99B05C71E37B0F1AAD36EA /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F1B7C7EC344BE0F4B63E2910FDDA03D7 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				BD5FD0492DA1F9AD522CD04F8BC00982 /* JSONAPI.h */,
+				1049F0C838627ED469FECC3FAA27CDBC /* JSONAPI.m */,
+				8302B9A115DC7CCBA1D7FA15E23A22CE /* JSONHTTPClient.h */,
+				C90CDF150A03E2459F090FA34362C932 /* JSONHTTPClient.m */,
+				20D30A8C431EC7AD6AE8BD53CAE14F1C /* JSONKeyMapper.h */,
+				412DF85CCB8127F9D45177B9348635E7 /* JSONKeyMapper.m */,
+				4D0B4F20C084ACB77FB24F1BC8C54EFA /* JSONModel.h */,
+				EDD5CF251AD5E5EAFF36E82CB683CD62 /* JSONModel.m */,
+				BBFD61CBB163B9731C45717B075F8E74 /* JSONModel+networking.h */,
+				11ED889ACFCEA885A5D724720296677B /* JSONModel+networking.m */,
+				6E9F800E7AD20E787E000AA60D4CE75B /* JSONModelArray.h */,
+				390ECAAF4EFEBB29EA0193D8DCFADAA4 /* JSONModelArray.m */,
+				AA63BA0AA9A5A9E666931C6527EF68CB /* JSONModelClassProperty.h */,
+				B9F60105DEA3885EC5BD850861AFF38D /* JSONModelClassProperty.m */,
+				5581AE07C3056317B4BDF55DD4E5D10D /* JSONModelError.h */,
+				B70C994502095B777065090C3A8F1A99 /* JSONModelError.m */,
+				5887C19C63FDF6CAE0743935F0DA4547 /* JSONModelLib.h */,
+				7DA42CA3FCFBFACF08F6DE0BB821A373 /* JSONValueTransformer.h */,
+				80546A46876FCC0FBA0A1B30E58CA17F /* JSONValueTransformer.m */,
+				8F7864D61646F79EEEB10CB2EFBF9036 /* NSArray+JSONModel.h */,
+				E2B003C9384AD02E91BA0010D510E55F /* NSArray+JSONModel.m */,
+				CA808FA20C244847149135CCBDCF09F3 /* Support Files */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		500B40C79B530721A705897F66B4A632 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4091B30FF7D2A6650335F1B11E33934D /* JSONAPI.h in Headers */,
+				D14516A110F811CBD87E0445F32ABDBD /* JSONHTTPClient.h in Headers */,
+				4D82F693058BDAACFAD97DD395805F39 /* JSONKeyMapper.h in Headers */,
+				D1DA063143EADE50E93A91A731DCFB68 /* JSONModel+networking.h in Headers */,
+				D6A3B656B369F0AEA203B3F304D51944 /* JSONModel-umbrella.h in Headers */,
+				8E5245F4101C8A0DDEA3B2C1A8074CF0 /* JSONModel.h in Headers */,
+				B7E74B4A1DE4AC9A0F1D1E7090A16FCA /* JSONModelArray.h in Headers */,
+				47BB0FD692E6DCAC4D89A8C0DF287093 /* JSONModelClassProperty.h in Headers */,
+				5DE35982098E2BEE652F9BF19E08FB43 /* JSONModelError.h in Headers */,
+				E6A91E54EB29DB556569829C3DB7A79D /* JSONModelLib.h in Headers */,
+				000F15A8E52D7F8A5EA10B6D208FC75A /* JSONValueTransformer.h in Headers */,
+				E2C10930D5716E969875A5D66CD1B16F /* NSArray+JSONModel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		783CECF0730F3A4A28D8969BAAF7647A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9A0E37F73D5F68FA97DC06E470BA347 /* GooropSQLiteChildern.h in Headers */,
+				1981A336C50F96E32185E74E2BF0F7FF /* GooropSQLiteManager.h in Headers */,
+				637D870F8ECEAFD6035B59AC85961F98 /* GooropSQLiteModel.h in Headers */,
+				9DC8A38DC3CACDA0769B99EC855F2B16 /* GooropSQLiteModelMigrator.h in Headers */,
+				5ED5C34AEE3CEEBF2FD41F95CF1209EB /* GooropSQLiteORM-umbrella.h in Headers */,
+				4D93A97354F18E3C5D42DC8062EE73F6 /* GooropSQLiteQuery.h in Headers */,
+				127F7B35CF1884715AA26ECDB255574B /* GooropSQLiteQueryBuilder.h in Headers */,
+				4A0971A3AD834898A4DA47A329330932 /* GooropSQLiteQueryManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		796C7BD20E1971ECABFA14DADEC869E8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF7A4B53B53FCC38613E5F72A17F12E7 /* Pods-GooropSQLiteORM_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8A1B98F16F13F2F72C375E44D51EE8A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F61BE79D4B46C119C136EDE960CE78C /* FMDatabase.h in Headers */,
+				74695802583BDB0C0818AC1B97F63815 /* FMDatabaseAdditions.h in Headers */,
+				6C63E2BEBE2BC08BD46F6A91D0A08143 /* FMDatabasePool.h in Headers */,
+				E330886E0E7C450E9669C4BD025D9ABD /* FMDatabaseQueue.h in Headers */,
+				AD01D434D8D120A3767270766AD30797 /* FMDB-umbrella.h in Headers */,
+				3ECC23FFAE400A6B2658AAF2990D83BE /* FMDB.h in Headers */,
+				183A0D8AF38E0EE20E47F1FEF9B37327 /* FMResultSet.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCC96807DE4CF74984195179A06BECFF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36C5D05537F068AB6595F86048B7AE69 /* Pods-GooropSQLiteORM_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		025618F01EDB8001B9A38236295D6505 /* Pods-GooropSQLiteORM_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7230D64BC6767FDAFC70E20F11C98EBD /* Build configuration list for PBXNativeTarget "Pods-GooropSQLiteORM_Tests" */;
+			buildPhases = (
+				29E98DBFC9E92A01B485D249E6EE6D32 /* Sources */,
+				33C0EF1D961FB9DFFDF133B0D5ACAD8F /* Frameworks */,
+				BCC96807DE4CF74984195179A06BECFF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-GooropSQLiteORM_Tests";
+			productName = "Pods-GooropSQLiteORM_Tests";
+			productReference = 99324E0AC2899282E73D29919D759096 /* Pods_GooropSQLiteORM_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		23CF27B2BA6AC7125EFFEDA8C5AA819F /* FMDB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E130BB4A68655453C9FDC5692FA44094 /* Build configuration list for PBXNativeTarget "FMDB" */;
+			buildPhases = (
+				6F019F4B57C689E3B448935B617CFF76 /* Sources */,
+				07163A0956D3012D6BF74E0B0E4CE17D /* Frameworks */,
+				A8A1B98F16F13F2F72C375E44D51EE8A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FMDB;
+			productName = FMDB;
+			productReference = A9D42FC44EACA468371AA967844D389B /* FMDB.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2B33EEE315246016495C3443D798C033 /* Pods-GooropSQLiteORM_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 825FD90750C2359304F8B1FA4C716FCF /* Build configuration list for PBXNativeTarget "Pods-GooropSQLiteORM_Example" */;
+			buildPhases = (
+				199F705F4EB337E30E68901289AE6BF4 /* Sources */,
+				1A1DE6D3758B9F2CE469171733870A12 /* Frameworks */,
+				796C7BD20E1971ECABFA14DADEC869E8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F75A38E2188365DE07BFFBAFC542697 /* PBXTargetDependency */,
+				3A19729C4E069121210A61C86CBD9AB9 /* PBXTargetDependency */,
+				DB4512D2447A5DA5840865DEDEB18E5C /* PBXTargetDependency */,
+			);
+			name = "Pods-GooropSQLiteORM_Example";
+			productName = "Pods-GooropSQLiteORM_Example";
+			productReference = 916B3CDB10A72A0FC9281351D871AC88 /* Pods_GooropSQLiteORM_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CB4A78D95F2C9C73ED13221DA5B9CD56 /* GooropSQLiteORM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 420E69BC5275F32C7708B7E4A53AE6AC /* Build configuration list for PBXNativeTarget "GooropSQLiteORM" */;
+			buildPhases = (
+				E47A5CB8BAB6068C8701969E5461F149 /* Sources */,
+				9163AEFC5736947C21D7A0DA2773225D /* Frameworks */,
+				783CECF0730F3A4A28D8969BAAF7647A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DD49C454F57E3F8D3B10F4EAE848816 /* PBXTargetDependency */,
+				19F9B6B5BACA615E6F49061BC6F8349C /* PBXTargetDependency */,
+			);
+			name = GooropSQLiteORM;
+			productName = GooropSQLiteORM;
+			productReference = 16A38A18867EB4C40EF50D78DF720D1A /* GooropSQLiteORM.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EC6D588553CC38D83D5B44392C0725B9 /* JSONModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F441A839FBBFFE4AF13670B02488FEC /* Build configuration list for PBXNativeTarget "JSONModel" */;
+			buildPhases = (
+				1594B41D20DB1BD4568A0ECD36C1FF2A /* Sources */,
+				833D4B7FB2CE584F29843EA29CAC66C9 /* Frameworks */,
+				500B40C79B530721A705897F66B4A632 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JSONModel;
+			productName = JSONModel;
+			productReference = A03054488A9F6C9029C79CC18E495B22 /* JSONModel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = A924047EC47675334B32C4A2E0C0578F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23CF27B2BA6AC7125EFFEDA8C5AA819F /* FMDB */,
+				CB4A78D95F2C9C73ED13221DA5B9CD56 /* GooropSQLiteORM */,
+				EC6D588553CC38D83D5B44392C0725B9 /* JSONModel */,
+				2B33EEE315246016495C3443D798C033 /* Pods-GooropSQLiteORM_Example */,
+				025618F01EDB8001B9A38236295D6505 /* Pods-GooropSQLiteORM_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1594B41D20DB1BD4568A0ECD36C1FF2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				631DC7A41EE9F747E95CFF6FDE95EF5B /* JSONAPI.m in Sources */,
+				B3D3153BD81C26C7B2C2D7E71EF33AE2 /* JSONHTTPClient.m in Sources */,
+				A509943CA785F1D47236A280D296884D /* JSONKeyMapper.m in Sources */,
+				3E48A504A843DD1038D44E6276F44CEC /* JSONModel+networking.m in Sources */,
+				730DB893A6CA5997B567B2B3EE51D5FB /* JSONModel-dummy.m in Sources */,
+				22C877B36DE02DB65C63A96BBA8EB994 /* JSONModel.m in Sources */,
+				1323240C770682D51BB00761AD610830 /* JSONModelArray.m in Sources */,
+				4793D70D003FCA5BD89DBA5884AB7DD0 /* JSONModelClassProperty.m in Sources */,
+				24084ED61C716B3EAD144F96E75DD663 /* JSONModelError.m in Sources */,
+				8FE45947F0D36562AC1595946199AED0 /* JSONValueTransformer.m in Sources */,
+				19D6805AA4B19A45486B613B20EED453 /* NSArray+JSONModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		199F705F4EB337E30E68901289AE6BF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27ADA51C597D7F827D5FF92BEF0B59C1 /* Pods-GooropSQLiteORM_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29E98DBFC9E92A01B485D249E6EE6D32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A17FB521E5C7323AA4401DDE7953124 /* Pods-GooropSQLiteORM_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F019F4B57C689E3B448935B617CFF76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A0569CB70F6F37A16E32EE210D0C66 /* FMDatabase.m in Sources */,
+				F0895B2A83F948153E1E5EA38A230B66 /* FMDatabaseAdditions.m in Sources */,
+				C8FC0929A42C36174794FE1ADFD620E3 /* FMDatabasePool.m in Sources */,
+				0D619A711F71058C9238B17E9AF48AFC /* FMDatabaseQueue.m in Sources */,
+				BA88E88A631D6BD023521B7206CE6C25 /* FMDB-dummy.m in Sources */,
+				7C818AE74E830311E61FF1A7E42D0713 /* FMResultSet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E47A5CB8BAB6068C8701969E5461F149 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B89034BA28678BBFDAF2FEB2B0FFDD3 /* GooropSQLiteChildern.m in Sources */,
+				BD1E5771F0595984C5E7A02232B75856 /* GooropSQLiteManager.m in Sources */,
+				DCE891365448C969738E517A17CC2579 /* GooropSQLiteModel.m in Sources */,
+				F940AD9830978E9BB9974A2F5C0D93F4 /* GooropSQLiteModelMigrator.m in Sources */,
+				751F0104322775ECD3F07DCD3D7631E9 /* GooropSQLiteORM-dummy.m in Sources */,
+				A2EB04F33F7AC50B848C0CC27165C341 /* GooropSQLiteQuery.m in Sources */,
+				07C0118CCE3C74AD68BC9EB6F5CB5267 /* GooropSQLiteQueryBuilder.m in Sources */,
+				197EE5B46D4C85716F40E4E49FF629DD /* GooropSQLiteQueryManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0F75A38E2188365DE07BFFBAFC542697 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FMDB;
+			target = 23CF27B2BA6AC7125EFFEDA8C5AA819F /* FMDB */;
+			targetProxy = 803D2BD54A40E58D607F26AA798A2C9C /* PBXContainerItemProxy */;
+		};
+		19F9B6B5BACA615E6F49061BC6F8349C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JSONModel;
+			target = EC6D588553CC38D83D5B44392C0725B9 /* JSONModel */;
+			targetProxy = A4109EC52A92CB6E7912C5C8CEB90E94 /* PBXContainerItemProxy */;
+		};
+		1DD49C454F57E3F8D3B10F4EAE848816 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FMDB;
+			target = 23CF27B2BA6AC7125EFFEDA8C5AA819F /* FMDB */;
+			targetProxy = 48EB3A4BF48696EF7052DACAE055EFC3 /* PBXContainerItemProxy */;
+		};
+		3A19729C4E069121210A61C86CBD9AB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GooropSQLiteORM;
+			target = CB4A78D95F2C9C73ED13221DA5B9CD56 /* GooropSQLiteORM */;
+			targetProxy = 8EC0E9E86BB005B20F995C17DE7BF457 /* PBXContainerItemProxy */;
+		};
+		DB4512D2447A5DA5840865DEDEB18E5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JSONModel;
+			target = EC6D588553CC38D83D5B44392C0725B9 /* JSONModel */;
+			targetProxy = 3B053E16B58DF9C8CC21629082C331F1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3606871B814C53A835D7AEF48F29747B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AF453A5DCBFE43A8339DBF5709459B7 /* FMDB.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FMDB/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FMDB/FMDB.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = FMDB;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5619B880BCDC5D5E39F35255934A1F9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AF453A5DCBFE43A8339DBF5709459B7 /* FMDB.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FMDB/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FMDB/FMDB.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = FMDB;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		60B7C792F55509E1C329D3F40851BC2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7A814771145FCE1B3D4F1151B560A8B /* Pods-GooropSQLiteORM_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GooropSQLiteORM_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GooropSQLiteORM_Example/Pods-GooropSQLiteORM_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GooropSQLiteORM_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		828CD1FEF201038158FF400212AC75DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FA11693BB79F3011BEF45640D70655F /* GooropSQLiteORM.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GooropSQLiteORM/GooropSQLiteORM-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GooropSQLiteORM/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GooropSQLiteORM/GooropSQLiteORM.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = GooropSQLiteORM;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A774559C6F6C402BA6225F59460B99BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DEC21E0BB35F4CB195AB5F67672B9F1 /* Pods-GooropSQLiteORM_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GooropSQLiteORM_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GooropSQLiteORM_Example/Pods-GooropSQLiteORM_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GooropSQLiteORM_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AFFA9BE1ED475857A4AF9A2829D23435 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C625391F80FC5BEB5334D1F6C017ED1 /* JSONModel.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JSONModel/JSONModel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JSONModel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JSONModel/JSONModel.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = JSONModel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C4F9846527B1020ABB42C321B49C9625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FA11693BB79F3011BEF45640D70655F /* GooropSQLiteORM.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GooropSQLiteORM/GooropSQLiteORM-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GooropSQLiteORM/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GooropSQLiteORM/GooropSQLiteORM.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = GooropSQLiteORM;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		DC595AA136834E5D43B1D73C17D482EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C625391F80FC5BEB5334D1F6C017ED1 /* JSONModel.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JSONModel/JSONModel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JSONModel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JSONModel/JSONModel.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = JSONModel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DEDD59C7E0F753CEF818D2B30DFFEB70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBAD3D83FB482C278BF72C2AF1EC21E0 /* Pods-GooropSQLiteORM_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GooropSQLiteORM_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GooropSQLiteORM_Tests/Pods-GooropSQLiteORM_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GooropSQLiteORM_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F4EAAEF412B9D4848D06B70249C84AE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6928DEE527347ABB2ED4623D762376E /* Pods-GooropSQLiteORM_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GooropSQLiteORM_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GooropSQLiteORM_Tests/Pods-GooropSQLiteORM_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GooropSQLiteORM_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */,
+				0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		420E69BC5275F32C7708B7E4A53AE6AC /* Build configuration list for PBXNativeTarget "GooropSQLiteORM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4F9846527B1020ABB42C321B49C9625 /* Debug */,
+				828CD1FEF201038158FF400212AC75DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F441A839FBBFFE4AF13670B02488FEC /* Build configuration list for PBXNativeTarget "JSONModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFFA9BE1ED475857A4AF9A2829D23435 /* Debug */,
+				DC595AA136834E5D43B1D73C17D482EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7230D64BC6767FDAFC70E20F11C98EBD /* Build configuration list for PBXNativeTarget "Pods-GooropSQLiteORM_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEDD59C7E0F753CEF818D2B30DFFEB70 /* Debug */,
+				F4EAAEF412B9D4848D06B70249C84AE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		825FD90750C2359304F8B1FA4C716FCF /* Build configuration list for PBXNativeTarget "Pods-GooropSQLiteORM_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A774559C6F6C402BA6225F59460B99BD /* Debug */,
+				60B7C792F55509E1C329D3F40851BC2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E130BB4A68655453C9FDC5692FA44094 /* Build configuration list for PBXNativeTarget "FMDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5619B880BCDC5D5E39F35255934A1F9A /* Debug */,
+				3606871B814C53A835D7AEF48F29747B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

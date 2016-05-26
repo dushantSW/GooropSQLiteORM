@@ -1,0 +1,50 @@
+//
+//  GooropSQLiteChildern.h
+//  goorop-sqlite-orm
+//
+//  Created by Dushant Singh on 17/08/15.
+//  Copyright (c) 2015 Dushant Singh. All rights reserved.
+//
+
+// Copyright (c) 2012-2015 Dushant Singh, Tweakers HB.
+// This code is distributed under the terms and conditions of the MIT license.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction,
+// including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to
+// do so, subject to the following conditions:
+// The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+// IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+//
+
+#import "GooropSQLiteModel.h"
+
+@interface GooropSQLiteChildern : GooropSQLiteModel
+
+/**
+ *  Compound id, combining both parentClass and child class name
+ */
+@property (nonatomic, strong) NSString *compoundId;
+
+/**
+ *  Parent class name
+ */
+@property (nonatomic, assign) NSString *parentClassName;
+
+/**
+ *  Name of column in database to which child is connected
+ */
+@property (nonatomic, strong) NSString *parentColumnName;
+
+/**
+ *  Name of the column in database to which parent is connected
+ */
+@property (nonatomic, strong) NSString *inBetweenTableName;
+
+/**
+ *  Name of the child class whos arrays are saved in inBetweenTableName
+ */
+@property (nonatomic, strong) NSString *childClassName;
+
+@end

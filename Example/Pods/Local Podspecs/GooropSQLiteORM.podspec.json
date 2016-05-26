@@ -1,0 +1,30 @@
+{
+  "name": "GooropSQLiteORM",
+  "version": "0.2.2",
+  "summary": "SQLite ORM for iOS on top of FMDB and JSONModel",
+  "homepage": "https://github.com/duseans/GooropSQLiteORM",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Dusean Singh": "waora@tweakersdev.com"
+  },
+  "source": {
+    "git": "https://github.com/duseans/GooropSQLiteORM.git",
+    "tag": "0.2.2"
+  },
+  "description": "TODO: Add long description of the pod here.",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "GooropSQLiteORM/Classes/**/*",
+  "dependencies": {
+    "FMDB": [
+      "~> 2.6"
+    ],
+    "JSONModel": [
+      "~> 1.2"
+    ]
+  }
+}
