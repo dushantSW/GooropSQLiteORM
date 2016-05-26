@@ -29,87 +29,87 @@
 #pragma mark -
 #pragma mark - Static methods
 
-+ (id)sharedManager
-{
++ (id)sharedManager {
     static GooropSQLiteQueryManager *sharedMyManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedMyManager = [[self alloc] init];
     });
-    
+
     return sharedMyManager;
 }
 
 #pragma mark -
 #pragma mark Instance methods
-- (BOOL)createTableWithName:(NSString *)tableName ofColumns:(NSArray *)columns withForeignKeys:(NSArray *)foreignKeys
-{
+
+- (BOOL)createTableWithName:(NSString *)tableName ofColumns:(NSArray *)columns withForeignKeys:(NSArray *)foreignKeys {
     BOOL created = NO;
     NSMutableArray *sqlColumns = [[NSMutableArray alloc] initWithCapacity:[columns count]];
     for (GooropSQLiteColumn *column in columns) {
         NSMutableString *sqlColumn = [[NSMutableString alloc] init];
         NSString *appendingString = nil;
-        
+
         if (column.primaryKey && column.autoIncrement) {
             // Change for auto-increment
             if ([column.type isEqualToString:@"NUMERIC"]) {
                 column.type = @"INTEGER";
-            } else {
+            }
+            else {
                 [NSException raise:@"Invalid auto-increment type" format:@"Auto-incremental type in %@ need to be NSNumber", tableName];
             }
-            
+
             appendingString = @"PRIMARY KEY AUTOINCREMENT ";
         } else if (column.primaryKey && !column.null && !column.autoIncrement) {
             appendingString = @"NOT NULL PRIMARY KEY ";
         } else if (!column.primaryKey && !column.null) {
             appendingString = @"NOT NULL ";
         }
-        
+
         if (appendingString) {
             [sqlColumn appendString:[NSString stringWithFormat:@"%@ %@ %@", column.name, column.type, appendingString]];
         } else {
             [sqlColumn appendString:[NSString stringWithFormat:@"%@ %@", column.name, column.type]];
         }
-        
+
         [sqlColumns addObject:sqlColumn];
     }
-    
+
     NSMutableString *sqlForeignKeyString = [[NSMutableString alloc] initWithCapacity:[foreignKeys count]];
     for (NSDictionary *foreignKey in foreignKeys) {
         NSString *sqlForeignKey = [NSString stringWithFormat:@"FOREIGN KEY (%@) REFERENCES %@(%@) ON DELETE CASCADE,",
-                                   [foreignKey objectForKey:@"column_name"],
-                                   [foreignKey objectForKey:@"reference_table_name"],
-                                   [foreignKey objectForKey:@"reference_table_primary_key"]];
+                                                             foreignKey[@"column_name"],
+                                                             foreignKey[@"reference_table_name"],
+                                                             foreignKey[@"reference_table_primary_key"]];
         [sqlForeignKeyString appendString:sqlForeignKey];
     }
-    
+
     NSString *creationQuery;
     if ([foreignKeys count] > 0) {
         creationQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS %@ (%@, %@) ",
-                         tableName, [sqlColumns componentsJoinedByString:@", "],
-                         [sqlForeignKeyString substringToIndex:[sqlForeignKeyString length] - 1]];
+                                                   tableName, [sqlColumns componentsJoinedByString:@", "],
+                                                   [sqlForeignKeyString substringToIndex:[sqlForeignKeyString length] - 1]];
     } else {
         creationQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS %@ (%@)",
-                         tableName, [sqlColumns componentsJoinedByString:@", "]];
+                                                   tableName, [sqlColumns componentsJoinedByString:@", "]];
     }
-    
+
     NSLog(@"CREATE Query: %@", creationQuery);
     FMDatabase *database = [[GooropSQLiteManager sharedManager] getDatabase];
     if (![database open]) return NO;
-    
+
     @try {
         // Create table
         [database executeUpdate:creationQuery];
-        
+
         // Index the given columns
         for (GooropSQLiteColumn *column in columns) {
             if (column.indexed) {
                 NSString *indexQuery = [NSString stringWithFormat:@"CREATE INDEX %@_index ON %@(%@)",
-                                        column.name, tableName, column.name];
+                                                                  column.name, tableName, column.name];
                 [database executeUpdate:indexQuery];
             }
         }
-        
+
         created = YES;
     }
     @catch (NSException *exception) {
@@ -118,7 +118,7 @@
     @finally {
         [database close];
     }
-    
+
     return created;
 }
 
@@ -127,16 +127,16 @@
         NSLog(@"Table %@ does not exists!", tableName);
         return NO;
     }
-    
+
     BOOL deleted = YES;
     FMDatabase *database = [[GooropSQLiteManager sharedManager] getDatabase];
     if (![database open]) return NO;
-    
+
     @try {
         // Drop table
         [database closeOpenResultSets];
         [database executeUpdate:[NSString stringWithFormat:@"DROP TABLE IF EXISTS %@", tableName]];
-        
+
         deleted = YES;
     }
     @catch (NSException *exception) {
@@ -145,20 +145,19 @@
     @finally {
         [database close];
     }
-    
+
     return deleted;
 }
 
-- (BOOL)doesExistsTableWithTableName:(NSString *)tableName
-{
+- (BOOL)doesExistsTableWithTableName:(NSString *)tableName {
     BOOL exists = NO;
-    
+
     FMDatabase *database = [[GooropSQLiteManager sharedManager] getDatabase];
     if (![database open]) return NO;
-    
+
     @try {
         FMResultSet *resultSet = [database executeQuery:@"SELECT name FROM sqlite_master WHERE type = 'table' AND name = ?",
-                                  tableName];
+                                                        tableName];
         if ([resultSet next]) {
             exists = YES;
         }
@@ -169,21 +168,20 @@
     @finally {
         [database close];
     }
-    
+
     return exists;
 }
 
-- (BOOL)doesRowExistInTable:(NSString *)tableName withPrimaryKeyName:(NSString *)keyName withPrimaryKey:(id)key
-{
+- (BOOL)doesRowExistInTable:(NSString *)tableName withPrimaryKeyName:(NSString *)keyName withPrimaryKey:(id)key {
     BOOL exists = NO;
-    
+
     if (!key) {
         return NO;
     }
-    
+
     FMDatabase *database = [[GooropSQLiteManager sharedManager] getDatabase];
     if (![database open]) return NO;
-    
+
     @try {
         NSString *sql = [NSString stringWithFormat:@"SELECT %@ FROM %@ WHERE %@ = ?", keyName, tableName, keyName];
         FMResultSet *resultSet = [database executeQuery:sql withArgumentsInArray:@[key]];
@@ -197,7 +195,7 @@
     @finally {
         [database close];
     }
-    
+
     return exists;
 }
 

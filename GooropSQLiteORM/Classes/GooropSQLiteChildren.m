@@ -1,5 +1,5 @@
 //
-//  GooropSQLiteQueryBuilder.h
+//  GooropSQLiteChildren.h
 //  goorop-sqlite-orm
 //
 //  Created by Dushant Singh on 17/08/15.
@@ -18,30 +18,23 @@
 // IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
-#import "GooropSQLiteModel.h"
-#import "GooropSQLiteQuery.h"
+#import "GooropSQLiteChildren.h"
 
-@interface GooropSQLiteQueryBuilder : NSObject
+@implementation GooropSQLiteChildren
 
-/**
- *  Builds an array of the queries. It´s an recursive function for
- *  recursively getting all the child and parents queries in an GooropSQLiteModel object.
- *
- *  for.eg. User contains an Company object, Company contains an Address object.
- *
- *  @param model   The model whose columns and values are to parsed into GooropQuery
- *
- *  @return Returns an array with GooropQuery.
- */
-- (GooropSQLiteQuery *)buildQueryForModel:(GooropSQLiteModel *)model;
++ (NSString *)primaryKey
+{
+    return @"compoundId";
+}
 
-/**
- *  Returns the current instance of the object as a key-value
- *  dictionary
- *
- *  @return Returns NSDictionary
- */
-- (NSDictionary *)dictionaryRepresentationOfModel:(GooropSQLiteModel *)model;
++ (NSString *)tableName
+{
+    return @"childerns";
+}
+
+- (NSString *) compoundId
+{
+    return [NSString stringWithFormat:@"%@.%@", self.parentClassName, self.parentColumnName];
+}
 
 @end

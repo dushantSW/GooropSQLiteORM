@@ -30,22 +30,22 @@
  *
  *  @return Returns true if table could truncate else false.
  */
-+ (BOOL) truncate;
++ (BOOL)truncate;
 
 /**
  *  Returns the table name of the model. Table name is by default
- *  same as model name in lower captials
+ *  same as model name in lower capitals
  *
  *  @return Returns NSString
  */
-+ (NSString *) tableName;
++ (NSString *)tableName;
 
 /**
  *  Check the current model with SQLite.
  *
  *  @return Returns true if model exists in database
  */
-+ (BOOL) doesModelExistsInDatabase;
++ (BOOL)doesModelExistsInDatabase;
 
 /**
  *  Creates a new table from the class.
@@ -59,7 +59,7 @@
  *  destroy all the data inside it.
  *
  *  Method compares all the columns from class to the columns
- *  of schema, if even single comparision fails then schema
+ *  of schema, if even single comparison fails then schema
  *  is re-built else it will return.
  *
  *  @return Yes if schema was rebuilt else NO
@@ -71,14 +71,14 @@
 /**
  *  Updates the schema of the self model
  *
- *  @param buildNummer build number of the current application.
+ *  @param buildNumber build number of the current application.
  *
  *  @returns true if schema was updated else false is returned.
  *
  *  @since 1.0
  */
-+ (BOOL) updateTableSchemaForVersion:(NSInteger)buildNummer;
++ (BOOL)updateTableSchemaForVersion:(NSInteger)buildNumber;
 
-+ (NSString *) sqliteTypeForProperty: (objc_property_t) property;
++ (NSString *)sqliteTypeForProperty:(objc_property_t)property;
 
 @end

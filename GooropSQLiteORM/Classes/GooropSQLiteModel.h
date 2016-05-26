@@ -38,7 +38,7 @@
  *
  * Thank you JSONModel for inspiration.
  */
-@interface NSObject(GooropSQLiteModelPropertyCompatibility)<Nullable, AutoIncrement>
+@interface NSObject (GooropSQLiteModelPropertyCompatibility) <Nullable, AutoIncrement>
 @end
 
 @interface GooropSQLiteModel : GooropSQLiteModelMigrator
@@ -48,18 +48,18 @@
 /**
  *  Saves the current instance of the model into SQLite.
  */
-- (void) save;
+- (void)save;
 
 /**
  *  Updates the current instance of the model with the SQLite version if it exists.
  */
-- (void) update;
+- (void)update;
 
 /**
  *  Deletes the current instance of the model from the SQLite version. It uses
  *  primary key for deleting the instance.
  */
-- (void) remove;
+- (void)remove;
 
 /**
  *  Checks if the current instance of the current primary key
@@ -67,25 +67,25 @@
  *
  *  @return Returns true if exists else false is returned.
  */
-- (BOOL) exits;
+- (BOOL)exits;
 
 #pragma mark - Static methods
 
 /**
- *  Returns the primary key name of the key. This method MUST be overriden
+ *  Returns the primary key name of the key. This method MUST be overridden
  *  in your class else NSException will be thrown in most of the CRUD
  *  operations
  *
  *  @return Returns primary key name.
  */
-+ (NSString *) primaryKey;
++ (NSString *)primaryKey;
 
 /**
  *  Get a list of column names which should be indexed into SQLite.
  *
  *  @return Returns a list of column names
  */
-+ (NSArray *) indexed;
++ (NSArray *)indexed;
 
 /**
  *  Finds the model by the given primary key.
@@ -94,7 +94,7 @@
  *
  *  @return Returns the GooropSQLiteModel
  */
-+ (id) find: (id) primaryKey;
++ (id)find:(id)primaryKey;
 
 /**
  *  Finds all the models where the columns are equal to the values
@@ -104,7 +104,7 @@
  *
  *  @return Returns an array of models
  */
-+ (NSArray *) where: (NSArray *)columnNames values:(NSArray *)values;
++ (NSArray *)where:(NSArray *)columnNames values:(NSArray *)values;
 
 /**
  *  Finds all the models where the column is equal to the given value
@@ -114,14 +114,14 @@
  *
  *  @return Returns an array of models.
  */
-+ (NSArray *) where: (NSString *)columnName value:(id)value;
++ (NSArray *)where:(NSString *)columnName value:(id)value;
 
 /**
  *  Finds all the objects that are available in SQLite
  *
  *  @return Returns an array of GooropSQLiteModel.
  */
-+ (NSArray *) allObjects;
++ (NSArray *)allObjects;
 
 /**
  *  Finds all the models by the given query.
@@ -131,6 +131,6 @@
  *
  *  @return Returns an array of GooropSQLiteModel.
  */
-+ (NSArray *)query:(NSString *)query withArgumentsArray: (NSArray *) arguments;
++ (NSArray *)query:(NSString *)query withArgumentsArray:(NSArray *)arguments;
 
 @end

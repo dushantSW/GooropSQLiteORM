@@ -24,52 +24,52 @@
 
 @implementation GooropSQLiteQueryBuilder
 
--(GooropSQLiteQuery *)buildQueryForModel:(GooropSQLiteModel *)model
-{
+- (GooropSQLiteQuery *)buildQueryForModel:(GooropSQLiteModel *)model {
     NSDictionary *objectDictionary = [self dictionaryRepresentationOfModel:model];
-    
+
     GooropSQLiteQuery *query = [[GooropSQLiteQuery alloc] init];
     query.tableName = [[model class] tableName];
     query.cls = [model class];
     query.primaryKey = [model valueForKey:[[model class] primaryKey]];
-    
-    BOOL valueAddable = YES;
-    for (id key in objectDictionary)
-    {
+
+    BOOL valueAddable;
+    for (id key in objectDictionary) {
         valueAddable = YES;
-        
-        id obj = [objectDictionary objectForKey:key];
+
+        id obj = objectDictionary[key];
         if (obj && ![obj isEqual:[NSNull null]]) {
             if ([obj isKindOfClass:[GooropSQLiteModel class]]) {
                 [query.parentQueries addObject:obj];
                 obj = [obj valueForKey:[[obj class] primaryKey]];
-            } else if ([obj isKindOfClass:[NSArray class]]) {
+            }
+            else if ([obj isKindOfClass:[NSArray class]]) {
                 BOOL isSQLiteModel = NO;
-                
+
                 if ([obj count] > 0) {
                     id childObject = [obj objectAtIndex:0];
                     isSQLiteModel = [childObject isKindOfClass:[GooropSQLiteModel class]];
                 }
-                
+
                 if (isSQLiteModel) {
                     id className = NSStringFromClass([[obj objectAtIndex:0] class]);
-                    [query.childernQueries addObject:@{@"class_name": className,
-                                                       @"column_name": key, @"array": obj}];
+                    [query.childrenQueries addObject:@{@"class_name" : className,
+                            @"column_name" : key, @"array" : obj}];
                     valueAddable = NO;
                 } else {
                     obj = [NSKeyedArchiver archivedDataWithRootObject:obj];
                 }
-            } else if ([obj isKindOfClass:[NSDictionary class]]) {
+            }
+            else if ([obj isKindOfClass:[NSDictionary class]]) {
                 obj = [NSKeyedArchiver archivedDataWithRootObject:obj];
             }
-            
+
             if (valueAddable) {
                 [[query columns] addObject:key];
                 [[query values] addObject:obj];
             }
         }
     }
-    
+
     return query;
 }
 
@@ -81,23 +81,22 @@
  *
  *  @return Returns an NSDictionary containing the properties of an object that are not nil
  */
-- (NSDictionary *) dictionaryRepresentationOfModel:(GooropSQLiteModel *)model
-{
+- (NSDictionary *)dictionaryRepresentationOfModel:(GooropSQLiteModel *)model {
     unsigned int count = 0;
     // Get a list of all properties in the class.
     objc_property_t *properties = class_copyPropertyList([model class], &count);
-    
+
     NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] initWithCapacity:count];
-    
+
     for (int i = 0; i < count; i++) {
         NSString *key = [NSString stringWithUTF8String:property_getName(properties[i])];
         id value = [model valueForKey:key];
-        
+
         // Only add to the NSDictionary if it's not nil.
         if (value)
-            [dictionary setObject:value forKey:key];
+            dictionary[key] = value;
     }
-    
+
     free(properties);
     return dictionary;
 }

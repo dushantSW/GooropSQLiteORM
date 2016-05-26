@@ -22,49 +22,43 @@
 
 @implementation GooropSQLiteQuery
 
-- (instancetype)init
-{
-    if (self = [super init])
-    {
+- (instancetype)init {
+    if (self = [super init]) {
         self.columns = [[NSMutableArray alloc] init];
         self.values = [[NSMutableArray alloc] init];
         self.parentQueries = [[NSMutableArray alloc] init];
-        self.childernQueries = [[NSMutableArray alloc] init];
+        self.childrenQueries = [[NSMutableArray alloc] init];
     }
-    
+
     return self;
 }
 
-- (NSArray *)placeHolders
-{
+- (NSArray *)placeHolders {
     NSMutableArray *holders = [[NSMutableArray alloc] init];
     if ([self.columns count] <= 0) {
         [NSException raise:@"No columns found" format:@"In order to get placeholders columns are requried."];
     }
-    
+
     for (int i = 0; i < [self.columns count]; i++) {
         [holders addObject:@"?"];
     }
     return holders;
 }
 
--(NSArray *)updatingPlaceHolders
-{
+- (NSArray *)updatingPlaceHolders {
     NSMutableArray *holders = [[NSMutableArray alloc] init];
     if ([self.columns count] <= 0) {
         [NSException raise:@"No columns found" format:@"In order to get placeholders columns are requried."];
     }
     for (int i = 0; i < [self.columns count]; i++) {
-        [holders addObject:[NSString stringWithFormat:@"%@ = ?", [self.columns objectAtIndex:i]]];
+        [holders addObject:[NSString stringWithFormat:@"%@ = ?", self.columns[i]]];
     }
     return holders;
 }
 
-- (void) removePrimaryKey
-{
-    NSInteger index = [self.values indexOfObject:self.primaryKey];
-    if (index != NSNotFound)
-    {
+- (void)removePrimaryKey {
+    NSUInteger index = [self.values indexOfObject:self.primaryKey];
+    if (index != NSNotFound) {
         [self.values removeObject:self.primaryKey];
         [self.columns removeObjectAtIndex:index];
     }

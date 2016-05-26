@@ -19,73 +19,69 @@
 //
 
 #import "GooropSQLiteManager.h"
-#import "GooropSQLiteChildern.h"
+#import "GooropSQLiteChildren.h"
 
 @implementation GooropSQLiteManager
 
-+ (id)sharedManager
-{
++ (id)sharedManager {
     static GooropSQLiteManager *sharedMyManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedMyManager = [[self alloc] init];
     });
-    
+
     return sharedMyManager;
 }
 
 #pragma mark - Public methods
-- (void)setDatabaseName:(NSString *)databaseName
-{
+
+- (void)setDatabaseName:(NSString *)databaseName {
     self->_databaseName = databaseName;
-    [self registerClass:[GooropSQLiteChildern class]];
+    [self registerClass:[GooropSQLiteChildren class]];
 }
 
-- (FMDatabaseQueue *) getDatabaseQueue
-{
+- (FMDatabaseQueue *)getDatabaseQueue {
     if (self.databaseName == nil) {
-        [NSException raise:@"No databasename given" format:@"Have you forgot to give database name?"];
+        [NSException raise:@"No database name given" format:@"Have you forgot to give database name?"];
     }
-    
+
     NSArray *docPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDir = [docPaths objectAtIndex:0];
+    NSString *documentsDir = docPaths[0];
     NSString *dbPath = [documentsDir stringByAppendingPathComponent:self.databaseName];
-    
+
     FMDatabaseQueue *queue = [FMDatabaseQueue databaseQueueWithPath:dbPath];
-    
+
     return queue;
 }
 
-- (FMDatabase *)getDatabase
-{
+- (FMDatabase *)getDatabase {
     if (self.databaseName == nil) {
-        [NSException raise:@"No databasename given" format:@"Have you forgot to give database name?"];
+        [NSException raise:@"No database name given" format:@"Have you forgot to give database name?"];
     }
-    
+
     NSArray *docPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDir = [docPaths objectAtIndex:0];
+    NSString *documentsDir = docPaths[0];
     NSString *dbPath = [documentsDir stringByAppendingPathComponent:self.databaseName];
-    
+
     FMDatabase *database = [FMDatabase databaseWithPath:dbPath];
     return database;
 }
 
 - (void)registerClass:(Class)model {
     if (self.databaseName == nil) {
-        [NSException raise:@"No databasename given" format:@"Have you forgot to give database name?"];
+        [NSException raise:@"No database name given" format:@"Have you forgot to give database name?"];
     }
-    
+
     // Throw invalid class
-    if (![model isSubclassOfClass:[GooropSQLiteModel class]])
-    {
+    if (![model isSubclassOfClass:[GooropSQLiteModel class]]) {
         [NSException raise:@"Invalid class" format:@"Class is required to extend GooropSQLiteModel"];
     }
-    
+
     if (![model doesModelExistsInDatabase]) {
         [model createTableSchema];
     }
     else {
-        NSNumber *buildNumber = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+        NSNumber *buildNumber = [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"];
         if ([model instancesRespondToSelector:@selector(updateTableSchemaForVersion:)]) {
             [model updateTableSchemaForVersion:[buildNumber integerValue]];
         }
@@ -93,8 +89,8 @@
 }
 
 #pragma mark - Private methods
-- (void) createDatabase
-{
+
+- (void)createDatabase {
     __weak typeof(self) weakSelf = self;
     [[self getDatabaseQueue] inDatabase:^(FMDatabase *db) {
         @try {

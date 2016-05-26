@@ -29,32 +29,32 @@
 /**
  *  Name of the column
  */
-@property (nonatomic, strong) NSString *name;
+@property(nonatomic, strong) NSString *name;
 
 /**
  *  Type of the column
  */
-@property (nonatomic, strong) NSString *type;
+@property(nonatomic, strong) NSString *type;
 
 /**
  *  Should column be indexed?
  */
-@property (nonatomic, assign) BOOL indexed;
+@property(nonatomic, assign) BOOL indexed;
 
 /**
  *  Is this column primary key in the table?
  */
-@property (nonatomic, assign) BOOL primaryKey;
+@property(nonatomic, assign) BOOL primaryKey;
 
 /**
  *  Shall this column be autoincremental
  */
-@property (nonatomic, assign) BOOL autoIncrement;
+@property(nonatomic, assign) BOOL autoIncrement;
 
 /**
  *  Can this column be null?
  */
-@property (nonatomic, assign) BOOL null;
+@property(nonatomic, assign) BOOL null;
 
 @end
 
@@ -75,7 +75,7 @@
  *
  *  @return Returns YES if the table exists else NO is returned
  */
-- (BOOL) doesExistsTableWithTableName:(NSString *) tableName;
+- (BOOL)doesExistsTableWithTableName:(NSString *)tableName;
 
 /**
  *  Creates a new table with the given table name. It doesn´t 
@@ -87,7 +87,7 @@
  *
  *  @return Returns YES if table is created else NO is returned.
  */
-- (BOOL) createTableWithName: (NSString *)tableName ofColumns:(NSArray *)columns withForeignKeys:(NSArray *)foreignKeys;
+- (BOOL)createTableWithName:(NSString *)tableName ofColumns:(NSArray *)columns withForeignKeys:(NSArray *)foreignKeys;
 
 /**
  *  Removes all the data and schema of the given table
@@ -98,7 +98,7 @@
  *
  *  @since 1.0
  */
-- (BOOL) deleteTableWithName: (NSString *)tableName;
+- (BOOL)deleteTableWithName:(NSString *)tableName;
 
 /**
  *  Checks if the row of the given primary key exists in the table.
@@ -109,6 +109,6 @@
  *
  *  @return Returns YES if row exists else NO is returned.
  */
-- (BOOL) doesRowExistInTable: (NSString *)tableName withPrimaryKeyName:(NSString *)keyName withPrimaryKey:(id)key;
+- (BOOL)doesRowExistInTable:(NSString *)tableName withPrimaryKeyName:(NSString *)keyName withPrimaryKey:(id)key;
 
 @end

@@ -30,13 +30,6 @@
 @property (nonatomic, retain) NSString *databaseName;
 
 /**
- *  Current version of the SQLite database. Represents as 0
- *  if no database has been created yet.
- */
-@property (nonatomic, readonly) uint64_t currentVersion;
-
-
-/**
  *  Shared instance of this class
  *
  *  @return Returns current instance.
@@ -51,7 +44,7 @@
 - (FMDatabase *) getDatabase;
 
 /**
- *  Gets a new instance of FMDatabaseQueue, which can be used for transcation
+ *  Gets a new instance of FMDatabaseQueue, which can be used for transaction
  *  purposes
  *
  *  @return Returns an instance of FMDatabaseQueue

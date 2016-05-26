@@ -24,55 +24,55 @@
 /**
  *  The class which the query belongs to
  */
-@property (nonatomic, assign) Class cls;
+@property(nonatomic, assign) Class cls;
 
 /**
  *  Primary key value
  */
-@property (nonatomic, assign) id primaryKey;
+@property(nonatomic, assign) id primaryKey;
 
 /**
  *  Table name in which is query will be saved
  */
-@property (nonatomic, strong) NSString *tableName;
+@property(nonatomic, strong) NSString *tableName;
 
 /**
  *  Columns of the query
  */
-@property (nonatomic, strong) NSMutableArray *columns;
+@property(nonatomic, strong) NSMutableArray *columns;
 
 /**
  *  Values of the query
  */
-@property (nonatomic, strong) NSMutableArray *values;
+@property(nonatomic, strong) NSMutableArray *values;
 
 /**
- *  Relationship queries which are requried to be save before this query
+ *  Relationship queries which are required to be save before this query
  */
-@property (nonatomic, strong) NSMutableArray *parentQueries;
+@property(nonatomic, strong) NSMutableArray *parentQueries;
 
 /**
  *  Relationship queries which are required to be saved after this query
  */
-@property (nonatomic, strong) NSMutableArray *childernQueries;
+@property(nonatomic, strong) NSMutableArray *childrenQueries;
 
 /**
  *  Returns a list of placeholder from total columns
  *
  *  @return Returns an array of placeholders
  */
-- (NSArray *) placeHolders;
+- (NSArray *)placeHolders;
 
 /**
  *  Returns a list of column and placeholder from total columns
  *
  *  @return Returns an array of columns and placeholder.
  */
-- (NSArray *) updatingPlaceHolders;
+- (NSArray *)updatingPlaceHolders;
 
 /**
  *  Removes the primary key and column, Useful for updating
  */
-- (void) removePrimaryKey;
+- (void)removePrimaryKey;
 
 @end

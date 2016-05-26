@@ -158,7 +158,7 @@
     return YES;
 }
 
-+ (BOOL)updateTableSchemaForVersion:(NSInteger)buildNummer {
++ (BOOL)updateTableSchemaForVersion:(NSInteger)buildNumber {
     return YES;
 }
 
@@ -188,37 +188,6 @@
     }
     
     return protocols;
-}
-
-+ (NSArray *) getColumnsAndType
-{
-    NSMutableArray *columns = [[NSMutableArray alloc] init];
-    unsigned int count = 0;
-    objc_property_t *properties = class_copyPropertyList([self class], &count);
-    
-    if (count > 0)
-    {
-        for (int i = 0; i < count; i++)
-        {
-            BOOL isForeignKey = NO;
-            NSString *columnName = [NSString stringWithUTF8String:property_getName(properties[i])];
-            NSString *sqliteType = [self sqliteTypeForProperty:properties[i]];
-            
-            NSArray *splitedPropertyAttributes = [[NSString stringWithUTF8String:property_getAttributes(properties[i])] componentsSeparatedByString:@"\""];
-            if ([splitedPropertyAttributes count] >= 2)
-            {
-                Class class = NSClassFromString([[[splitedPropertyAttributes objectAtIndex:1] componentsSeparatedByString:@"<"] objectAtIndex:0]);
-                if ([class isSubclassOfClass:[GooropSQLiteModel class]]) {
-                    isForeignKey = YES;
-                }
-            }
-            
-            [columns addObject:@{@"columnName": columnName, @"sqlite_type": sqliteType, @"isForeign": [NSNumber numberWithBool:isForeignKey]}];
-        }
-    }
-    
-    free(properties);
-    return columns;
 }
 
 + (NSString *) sqliteTypeForProperty: (objc_property_t) property
@@ -260,10 +229,10 @@
         NSArray *splitedPropertyAttributes = [[NSString stringWithUTF8String:property_type] componentsSeparatedByString:@"\""];
         if ([splitedPropertyAttributes count] >= 2)
         {
-            NSArray *attributes = [[splitedPropertyAttributes objectAtIndex:1] componentsSeparatedByString:@"<"];
+            NSArray *attributes = [splitedPropertyAttributes[1] componentsSeparatedByString:@"<"];
             BOOL hasProtocols = attributes.count > 1;
             
-            Class class = NSClassFromString([attributes objectAtIndex:0]);
+            Class class = NSClassFromString(attributes[0]);
             if ([class isSubclassOfClass:[NSString class]]) {
                 typeName = @"TEXT";
             } else if ([class isSubclassOfClass:[NSNumber class]]) {
@@ -282,12 +251,12 @@
             } else if ([class isSubclassOfClass:[NSDictionary class]]) {
                 typeName = @"BLOB";
             } else {
-                [NSException raise:@"Unknow type" format:@"Property %s does not contain a valid type", property_getName(property)];
+                [NSException raise:@"Unknown type" format:@"Property %s does not contain a valid type", property_getName(property)];
             }
         }
         else
         {
-            [NSException raise:@"Unknow type" format:@"Property %s does not contain a valid type", property_getName(property)];
+            [NSException raise:@"Unknown type" format:@"Property %s does not contain a valid type", property_getName(property)];
         }
     }
     
@@ -306,7 +275,7 @@
         NSArray *splitedPropertyAttributes = [[NSString stringWithUTF8String:property_type] componentsSeparatedByString:@"\""];
         if ([splitedPropertyAttributes count] >= 2)
         {
-            Class class = NSClassFromString([[[splitedPropertyAttributes objectAtIndex:1] componentsSeparatedByString:@"<"] objectAtIndex:0]);
+            Class class = NSClassFromString([splitedPropertyAttributes[1] componentsSeparatedByString:@"<"][0]);
             if ([class isSubclassOfClass:[GooropSQLiteModel class]])
             {
                 [keys addObject:@{@"column_name": columnName,

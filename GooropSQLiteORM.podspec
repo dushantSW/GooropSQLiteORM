@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "GooropSQLiteORM"
-  s.version          = "0.2.2"
+  s.version          = "0.2.3"
   s.summary          = "SQLite ORM for iOS on top of FMDB and JSONModel"
   s.homepage         = "https://github.com/duseans/GooropSQLiteORM"
   s.license          = { :type => 'MIT', :file => 'LICENSE' }

@@ -1,5 +1,5 @@
 //
-//  GooropSQLiteQueryBuilder.h
+//  GooropSQLiteChildren.h
 //  goorop-sqlite-orm
 //
 //  Created by Dushant Singh on 17/08/15.
@@ -18,30 +18,33 @@
 // IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
 #import "GooropSQLiteModel.h"
-#import "GooropSQLiteQuery.h"
 
-@interface GooropSQLiteQueryBuilder : NSObject
-
-/**
- *  Builds an array of the queries. It´s an recursive function for
- *  recursively getting all the child and parents queries in an GooropSQLiteModel object.
- *
- *  for.eg. User contains an Company object, Company contains an Address object.
- *
- *  @param model   The model whose columns and values are to parsed into GooropQuery
- *
- *  @return Returns an array with GooropQuery.
- */
-- (GooropSQLiteQuery *)buildQueryForModel:(GooropSQLiteModel *)model;
+@interface GooropSQLiteChildren : GooropSQLiteModel
 
 /**
- *  Returns the current instance of the object as a key-value
- *  dictionary
- *
- *  @return Returns NSDictionary
+ *  Compound id, combining both parentClass and child class name
  */
-- (NSDictionary *)dictionaryRepresentationOfModel:(GooropSQLiteModel *)model;
+@property (nonatomic, strong) NSString *compoundId;
+
+/**
+ *  Parent class name
+ */
+@property (nonatomic, assign) NSString *parentClassName;
+
+/**
+ *  Name of column in database to which child is connected
+ */
+@property (nonatomic, strong) NSString *parentColumnName;
+
+/**
+ *  Name of the column in database to which parent is connected
+ */
+@property (nonatomic, strong) NSString *inBetweenTableName;
+
+/**
+ *  Name of the child class whos arrays are saved in inBetweenTableName
+ */
+@property (nonatomic, strong) NSString *childClassName;
 
 @end
